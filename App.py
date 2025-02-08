@@ -69,7 +69,7 @@ if st.button("Predict Price"):
     df_fin = df_fin[model.feature_names_in_]
 
     # Predict price
-    predicted_price = np.exp(model.predict(df_fin))[0]
+    predicted_price = (np.exp(model.predict(df_fin))[0])*1.39
 
     # Display result
-    st.success(f"💰 Predicted Laptop Price: ₹{predicted_price:.2f}")
+    st.success(f"💰 Predicted Laptop Price: {predicted_price:.2f} Taka")
