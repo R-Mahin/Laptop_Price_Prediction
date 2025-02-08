@@ -2,12 +2,18 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+import os
 
 # Load the trained model
+#with open(r"F:\ML2\price_pred.pkl", "rb") as file:
+#   model = pickle.load(file)
+
+file_path = os.path.join(os.path.dirname(__file__), "price_pred.pkl")
 with open(r"F:\ML2\price_pred.pkl", "rb") as file:
     model = pickle.load(file)
 
 st.title("💻 Laptop Price Predictor")
+
 
 # Company names
 company_names = ['Apple', 'Asus', 'Dell', 'HP', 'Lenovo', 'MSI', 'Others', 'Toshiba']
