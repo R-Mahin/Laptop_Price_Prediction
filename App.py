@@ -9,7 +9,7 @@ import os
 #   model = pickle.load(file)
 
 file_path = os.path.join(os.path.dirname(__file__), "price_pred.pkl")
-with open(r"F:\ML2\price_pred.pkl", "rb") as file:
+with open(file_path, "rb") as file:
     model = pickle.load(file)
 
 st.title("💻 Laptop Price Predictor")
